@@ -116,12 +116,10 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
               required
               value={credentialInput}
               onChange={(e) => setCredentialInput(e.target.value)}
-              placeholder={`e.g. ${p1First} & ${p2First} or Alex & Anna`}
               className="w-full px-3.5 py-3 text-sm bg-white rounded-xs text-[#292722] shadow-xs focus:outline-hidden focus:ring-1 focus:ring-[#8C6D45]"
             />
             <span className="text-[10px] text-neutral-500 mt-1 block">
-              Format: Both partners&apos; first names joined by &amp; (e.g. &ldquo;{p1First} &amp; {p2First}&rdquo;)
-            </span>
+              </span>
           </div>
 
           <div>
@@ -133,7 +131,6 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
                 type="password"
                 value={passcode}
                 onChange={(e) => setPasscode(e.target.value)}
-                placeholder="2027"
                 className="w-full px-3.5 py-3 text-sm bg-white rounded-xs text-[#292722] shadow-xs focus:outline-hidden focus:ring-1 focus:ring-[#8C6D45]"
               />
               <KeyRound className="w-4 h-4 text-[#8C6D45] absolute right-3 top-3.5 opacity-60" />
