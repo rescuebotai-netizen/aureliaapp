@@ -139,8 +139,7 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
               <KeyRound className="w-4 h-4 text-[#8C6D45] absolute right-3 top-3.5 opacity-60" />
             </div>
             <span className="text-[10px] text-neutral-500 mt-1 block">
-              Standard administrative PIN: <strong className="text-[#292722]">2027</strong>
-            </span>
+             </span>
           </div>
 
           <div className="pt-2 space-y-2">
