@@ -34,10 +34,10 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
     const p1Clean = p1First.toLowerCase();
     const p2Clean = p2First.toLowerCase();
 
-    // Check if input matches both first names (e.g. "sarah & james", "james & sarah", "alex & anna", etc.)
+    // Check if input matches both first names (e.g. "samson & kevine")
     const matchesCoupleNames =
       (inputClean.includes(p1Clean) && inputClean.includes(p2Clean)) ||
-      (inputClean.includes('alex') && inputClean.includes('anna')) ||
+      (inputClean.includes('samson') && inputClean.includes('kevine')) ||
       inputClean === `${p1Clean} & ${p2Clean}` ||
       inputClean === `${p1Clean} and ${p2Clean}`;
 
@@ -53,7 +53,7 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
       }, 700);
     } else if (!matchesCoupleNames) {
       setError(
-        `Invalid couple credential. Please enter both partner first names (e.g. "${p1First} & ${p2First}" or "Alex & Anna").`
+        `Invalid couple credential. Please enter both partner first names (e.g. "${p1First} & ${p2First}").`
       );
     } else {
       setError('Invalid PIN passcode. Please enter 2027.');
@@ -116,7 +116,7 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
               required
               value={credentialInput}
               onChange={(e) => setCredentialInput(e.target.value)}
-              placeholder={`e.g. ${p1First} & ${p2First} or Alex & Anna`}
+              placeholder={`e.g. ${p1First} & ${p2First}}
               className="w-full px-3.5 py-3 text-sm bg-white rounded-xs text-[#292722] shadow-xs focus:outline-hidden focus:ring-1 focus:ring-[#8C6D45]"
             />
             <span className="text-[10px] text-neutral-500 mt-1 block">
@@ -139,7 +139,6 @@ export const CoupleAuthModal: React.FC<CoupleAuthModalProps> = ({
               <KeyRound className="w-4 h-4 text-[#8C6D45] absolute right-3 top-3.5 opacity-60" />
             </div>
             <span className="text-[10px] text-neutral-500 mt-1 block">
-              Standard administrative PIN: <strong className="text-[#292722]">2027</strong>
             </span>
           </div>
 
